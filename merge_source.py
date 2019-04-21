@@ -5,13 +5,12 @@ import codecs # UnicodeDecodeError回避
 
 def main():
     # get file list
-    print("please input files path in source directory")
+    print("please input project name in source directory")
     path = input()
     paths = glob.glob("./source/" + path + "/*")
 
     mergedSource = ""
     # file open
-    print(paths)
     print("merge start")
     for p in paths:
         print(p)
@@ -28,5 +27,5 @@ def main():
     print("export {}".format(path))
 
 if __name__ == '__main__':
-    print("Start if merge source")
+    print("Start merge source")
     main()

@@ -1,0 +1,25 @@
+from gensim.models import word2vec
+import logging
+
+def main():
+    # logging
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+    print("please input project name in text directory")
+    path = input()
+    sentences = word2vec.LineSentence('./text/' + path + ".txt")
+    print("please input modeling option")
+    print('if not use default option, please input "option"')
+    isOption = input()
+
+    # use default option
+    if isOption != "option":
+        model = word2vec.Word2Vec(sentences, size=200, min_count=20, window=15,batch_words=10,)
+        model.save("./model/" + path + ".model")
+
+    else:
+        print("WIP.....")
+
+if __name__ == '__main__':
+    print("Start modeling")
+    main()
