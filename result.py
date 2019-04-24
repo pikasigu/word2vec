@@ -1,5 +1,6 @@
 from gensim.models import word2vec
-import warnings # Future warning 対策
+import warnings  # Future warning 対策
+
 
 def main():
     warnings.filterwarnings('ignore')

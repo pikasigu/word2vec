@@ -1,9 +1,11 @@
 from gensim.models import word2vec
 import logging
 
+
 def main():
     # logging
-    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
+                        level=logging.INFO)
 
     print("please input project name in text directory")
     path = input()
@@ -15,16 +17,16 @@ def main():
     # use default option
     if isOption != "option":
         model = word2vec.Word2Vec(sentences,
-            sg=1,
-            size=300,
-            min_count=5,
-            window=3,
-            batch_words=10
-            )
+                                  sg=1,
+                                  size=300,
+                                  min_count=5,
+                                  window=3,
+                                  batch_words=10)
         model.save("./model/" + path + ".model")
 
     else:
         print("WIP.....")
+
 
 if __name__ == '__main__':
     print("Start modeling")
