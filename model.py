@@ -28,6 +28,22 @@ def main():
         print("WIP.....")
 
 
+def sub(project):
+    # logging
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s',
+                        level=logging.INFO)
+
+    sentences = word2vec.LineSentence('./text/' + project + ".txt")
+    print("modeling start")
+    model = word2vec.Word2Vec(sentences,
+                              sg=1,
+                              size=300,
+                              min_count=5,
+                              window=3,
+                              batch_words=10)
+    model.save("./model/" + project + ".model")
+
+
 if __name__ == '__main__':
     print("Start modeling")
     main()
