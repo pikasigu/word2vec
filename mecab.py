@@ -20,7 +20,7 @@ def sub(project):
     # 分かち書き
     # mt = MeCab.Tagger("-Ochasen -d '/path/mecab-ipadic~") #自分がインストールした辞書を指定
     mt = MeCab.Tagger()
-    mt.parse("") # unicodeでエラーが出ることがある
+    mt.parse("")  # unicodeでエラーが出ることがある
 
     with open('./text/' + project + ".txt", 'w', encoding='utf-8') as f:
         for text in source:
@@ -40,11 +40,6 @@ def sub(project):
             f.write(' '.join(tmp_lists) + '\n')
 
     print("mecab finish")
-
-
-def aozora():
-    # htmlソースを全取得して本文を抜き出す
-    path = "./text/aozora_git_source/cards/"
 
 
 if __name__ == '__main__':
