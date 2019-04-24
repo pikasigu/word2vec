@@ -44,3 +44,6 @@ def sub(project):
 
 if __name__ == '__main__':
     print("Start mecab")
+    print("input project name")
+    project = input()
+    sub(project)
