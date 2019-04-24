@@ -14,7 +14,13 @@ def main():
 
     # use default option
     if isOption != "option":
-        model = word2vec.Word2Vec(sentences, size=200, min_count=20, window=15,batch_words=10,)
+        model = word2vec.Word2Vec(sentences,
+            sg=1,
+            size=300,
+            min_count=5,
+            window=3,
+            batch_words=10
+            )
         model.save("./model/" + path + ".model")
 
     else:
