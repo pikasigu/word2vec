@@ -18,8 +18,8 @@ def main():
     if isOption != "option":
         model = word2vec.Word2Vec(sentences,
                                   sg=1,
-                                  size=300,
-                                  min_count=5,
+                                  size=200,
+                                  min_count=1,
                                   window=3,
                                   batch_words=10)
         model.save("./model/" + path + ".model")
@@ -37,10 +37,9 @@ def sub(project):
     print("modeling start")
     model = word2vec.Word2Vec(sentences,
                               sg=1,
-                              size=300,
-                              min_count=5,
-                              window=3,
-                              batch_words=10)
+                              size=200,
+                              min_count=3,
+                              window=5)
     model.save("./model/" + project + ".model")
 
 

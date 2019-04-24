@@ -13,7 +13,7 @@ def main():
     print("Input word")
     word = input()
     while word == "":
-        results = model.wv.most_similar(positive=[word])
+        results = model.wv.most_similar(positive=word)
         print("------------------")
         print("most similar words")
         for result in results:
@@ -31,8 +31,8 @@ def sub(project):
     # results
     print("Input word")
     word = input()
-    while word == "":
-        results = model.wv.most_similar(positive=[word])
+    while word != "":
+        results = model.wv.most_similar(positive=word)
         print("------------------")
         print("most similar words")
         for result in results:

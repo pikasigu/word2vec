@@ -1,6 +1,8 @@
 import merge_source
 import model
 import result
+import mecab
+import replace
 
 
 def main():
@@ -8,6 +10,12 @@ def main():
     print("Input source name")
     project = input()
     merge_source.sub(project)
+    print("is code? [y/n]")
+    iscode = input()
+    if iscode == "y":
+        replace.sub(project)
+    else:
+        mecab.sub(project)
     model.sub(project)
     result.sub(project)
 
