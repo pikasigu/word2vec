@@ -19,7 +19,10 @@ def main():
         mecab.sub(project)
     model.sub(project)
     result.sub(project)
-    plot.main(project)
+    print("plot? [y]")
+    iscode = input()
+    if iscode == "y":
+        plot.main(project)
 
 
 if __name__ == '__main__':
