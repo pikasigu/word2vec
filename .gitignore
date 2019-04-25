@@ -6,3 +6,4 @@ wiki/*
 mining/__pycache__/*
 mining/text/*
 mining/twitter_config.py
+mining/search/*

@@ -39,3 +39,7 @@ $ python result.py
 ```
 $ python plot.py
 ```
+
+## その他
+- miningディレクト内は雑な実装が多いので気をつけてください
+- 今後直します
