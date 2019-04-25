@@ -9,7 +9,7 @@ def main():
 
     print("please input project name in text directory")
     path = input()
-    sentences = word2vec.LineSentence('./text/' + path + ".txt")
+    sentences = word2vec.Text8Corpus('./text/' + path + ".txt")
     print("please input modeling option")
     print('if not use default option, please input "option"')
     isOption = input()
@@ -18,10 +18,10 @@ def main():
     if isOption != "option":
         model = word2vec.Word2Vec(sentences,
                                   sg=1,
-                                  size=200,
-                                  min_count=1,
-                                  window=3,
-                                  batch_words=10)
+                                  size=500,
+                                  min_count=10,
+                                  window=5,
+                                  batch_words=50)
         model.save("./model/" + path + ".model")
 
     else:

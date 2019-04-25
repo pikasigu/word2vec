@@ -3,3 +3,5 @@ text/*
 model/*
 __pycache__/*
 wiki/*
+mining/__pycache__/*
+mining/text/*

@@ -28,6 +28,7 @@ def forProgram():
         t_res = re.sub(pattern1, "", s)
         t_res = re.sub(pattern2, "", t_res)
         t_res = re.sub(pattern3, " ", t_res)
+        print(t_res)
         if not t_res == "":
             result += t_res + "\n"
 
@@ -59,6 +60,7 @@ def sub(project):
         t_res = re.sub(pattern1, "", s)
         t_res = re.sub(pattern2, "", t_res)
         t_res = re.sub(pattern3, " ", t_res)
+        print(t_res)
         if not t_res == "":
             result += t_res + "\n"
 
