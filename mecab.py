@@ -33,7 +33,9 @@ def sub(project):
             node = mt.parseToNode(text)
             while node:
                 # 品詞の絞り込み
-                if node.feature.startswith('名詞' or '形容詞' or '動詞'):
+                if node.feature.startswith('名詞') \
+                    or node.feature.startswith('形容詞') \
+                        or node.feature.startswith('動詞'):
                     tmp_lists.append(node.surface)
                 node = node.next
             print(tmp_lists)
