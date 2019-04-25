@@ -5,3 +5,4 @@ __pycache__/*
 wiki/*
 mining/__pycache__/*
 mining/text/*
+mining/twitter_config.py
