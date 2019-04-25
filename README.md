@@ -1,10 +1,14 @@
 # word2vecで色々やってみる
 
 # 2019/04
-## ソースコードに対してword2vec
-- ソースコードに対してword2vec処理をしてみる
+## word2vec
 ### 実行手順
-- 一発ならこっち
+- sourceディレクトリ内にテキストデータorソースコードなどが入ったディレクトリを用意します
+```
+word2vec/source/hoge/***.txt
+word2vec/source/hoge/***.class
+```
+- mainで実行するか個別で実行します
 ```
 $ python main.py
 # source内のディレクトリを指定
@@ -27,7 +31,11 @@ $ python model.py
 #ソースコードが入っているsource内のディレクトリを指定
 # optionを適宜設定してモデリングを実行
 ```
-- 生成されたモデルから類似とかを色々弄ってみる
+- 生成されたモデルから類似
 ```
 $ python result.py
+```
+- プロット
+```
+$ python plot.py
 ```
