@@ -1,8 +1,10 @@
 # Google Colab 用ファイル群
 
-## 使い方
+- 実行結果を jupyter で残していければ
 
-- 加筆予定
+## 用途
+
+- local or Colab 上での実行結果,Note 等を貯めておく候補地
 
 ## 実装
 
